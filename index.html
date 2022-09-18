@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNTUK KAMU</title>
+</head>
+<body>
+ <div id="app" style="display: flex;justify-content: center; align-items: center; height: 100vh;">
+  <!-- new element created by us -->
+ </div>
+
+ <script>
+    onload = function() {
+      //declairing variable
+      let id = document.getElementById("app")
+      let loading = document.createElement("div")
+
+
+      //fill the content
+      loading.textContent = "HAI UNTUK KAMU YANG AKU KIRA RUMAH"
+      loading.style.fontSize = "24px"
+      loading.textContent = "HI BUB"
+      id.appendChild(loading)
+
+      //dalam waktu berapa lama dilakukan perubahan dom
+      let loaded = setInterval(() =>{
+        loading.textContent = loading.textContent + "."
+        }, 1000) //1000ms = 1dtk
+
+      // hentikan interval ketika
+      setTimeout(() => { 
+        clearInterval(loaded)
+        loading.textContent ="TANGGUNG JAWAB DAH BUAT SALTING♡"
+      }, 4000) // 4s
+
+      }
+ </script>
+</body>
+</html>
